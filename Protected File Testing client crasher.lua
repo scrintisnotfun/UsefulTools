@@ -127,13 +127,13 @@ if not tool then
     
     -- Wait until we find the tool
     while not tool do
-        task.wait()
+        task.wait(0.01)
     end
 end
 
 -- Equip and activate the tool
 tool.Parent = character
-task.wait(0.1) -- Small delay for equip animation
+task.wait(0.05) -- Small delay for equip animation
 tool:Activate()
 
 print("Successfully equipped and activated Flower Seed Pack")
